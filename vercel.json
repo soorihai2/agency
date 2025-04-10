@@ -1,4 +1,12 @@
 {
   "version": 2,
-  "framework": "sveltekit"
+  "framework": "sveltekit",
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
 } 
