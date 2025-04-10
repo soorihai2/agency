@@ -1,0 +1,119 @@
+/* eslint-disable */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-sans text-text bg-background;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-text font-medium hover:text-primary transition-colors;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-primary text-white px-8 py-4 rounded-xl font-semibold 
+           transition-all duration-300 hover:scale-105 hover:shadow-lg inline-block;
+  }
+
+  .btn-primary-light {
+    @apply bg-white text-primary px-8 py-4 rounded-xl font-semibold 
+           transition-all duration-300 hover:scale-105 hover:bg-gray-50 
+           hover:shadow-lg inline-block;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-white border-2 border-white px-8 py-4 rounded-xl 
+           font-semibold transition-all duration-300 hover:bg-white 
+           hover:text-primary hover:shadow-lg inline-block;
+  }
+
+  .btn-outline {
+    @apply bg-transparent text-primary border-2 border-primary px-8 py-4 rounded-xl 
+           font-semibold transition-all duration-300 hover:bg-primary 
+           hover:text-white hover:shadow-lg inline-block;
+  }
+
+  .card {
+    @apply bg-white rounded-card p-8 transition-all duration-300 
+           hover:shadow-lg hover:scale-105 opacity-100 transform-none;
+  }
+
+  .section {
+    @apply py-section relative;
+  }
+
+  .container {
+    @apply max-w-container mx-auto px-6;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-primary;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-6;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-text-light max-w-2xl mx-auto;
+  }
+
+  .video-card {
+    @apply bg-white/10 rounded-xl p-6 backdrop-blur-sm transition-all duration-300 
+           hover:scale-105 opacity-100 transform-none;
+  }
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.6s ease-out forwards;
+}
+
+/* Ensure GSAP animated elements are visible by default */
+.hero-content h1,
+.hero-content p,
+.hero-content .flex,
+.hero-image {
+  opacity: 1 !important;
+  transform: none !important;
+} 
