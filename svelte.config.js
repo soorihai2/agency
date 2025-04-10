@@ -23,6 +23,9 @@ const config = {
       $styles: "src/styles",
       $utils: "src/utils",
     },
+    files: {
+      assets: "static",
+    },
   },
   preprocess: vitePreprocess(),
 };
