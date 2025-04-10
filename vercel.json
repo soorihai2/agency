@@ -1,5 +1,8 @@
 {
   "version": 2,
+  "framework": "sveltekit",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".svelte-kit/output",
   "builds": [
     {
       "src": "package.json",
