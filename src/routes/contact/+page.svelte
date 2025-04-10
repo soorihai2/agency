@@ -423,7 +423,6 @@
     box-shadow: 0 0 0 2px var(--color-primary/10);
   }
 
-  .btn-primary,
   .btn-secondary {
     display: inline-block;
     padding: 0.75rem 2rem;
